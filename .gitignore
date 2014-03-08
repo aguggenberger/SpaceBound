@@ -1,6 +1,8 @@
 *.class
 
 # Package Files #
-*.jar
 *.war
 *.ear
+/space-bound/bin
+/space-bound-android/bin
+/space-bound-desktop/bin
