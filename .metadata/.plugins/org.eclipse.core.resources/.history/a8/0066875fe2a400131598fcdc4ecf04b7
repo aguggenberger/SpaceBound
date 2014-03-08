@@ -1,0 +1,89 @@
+package com.aguggenberger.spacebound.screens;
+
+import com.aguggenberger.spacebound.SpaceBound;
+import com.aguggenberger.spacebound.engine.Engine;
+import com.aguggenberger.spacebound.engine.Level;
+import com.aguggenberger.spacebound.engine.services.ResourceLoader;
+import com.aguggenberger.spacebound.engine.utils.TouchUpListener;
+import com.aguggenberger.spacebound.resources.SpaceBoundMusic;
+import com.aguggenberger.spacebound.resources.SpaceBoundSFX;
+import com.aguggenberger.spacebound.screens.base.GameScreen;
+import com.aguggenberger.spacebound.screens.base.UIScreen;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Music;
+import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+
+public class MainMenuScreen extends UIScreen {
+	private class SetScreenListener extends TouchUpListener {
+		private final GameScreen screen;
+		
+		public SetScreenListener(GameScreen screen) {
+			this.screen = screen;
+		}
+		
+		@Override
+    	public void touchUp(InputEvent event, 
+			float x, float y, int pointer, int button) {
+    		sounds.play(SpaceBoundSFX.MENU_ENTER_HIT);
+    		setNextScreen(screen);
+    	}
+	}
+	
+	private GameScreen nextScreen;
+	
+	private void setNextScreen(GameScreen screen) {
+		this.nextScreen = screen;
+		setDone();
+	}
+	
+	public GameScreen getNextScreen() {
+		return nextScreen;
+	}
+	
+	@Override
+	public void show() {
+		super.show();
+		
+        table.add("Space Bound").spaceBottom(50);
+        table.row();
+        
+        Level level = Engine.levels.get(0);
+        ResourceLoader loader = level.getLoader();
+        
+        //addButton("level select", new LoadingScreen(loader, new LevelScreen(level)));
+        //addButton("Play", new LoadGameScreen()); 
+        //addButton("Play", new LevelScreen());
+        addButton("Play", new LoadingScreen(, new LevelScreen()));
+        addButton("High Score", new HighScoreScreen());
+        addButton("Options", new OptionsScreen());
+        
+        music.play(SpaceBoundMusic.MENU_SCREEN, this.getName());
+        
+        table.row();
+        
+	}
+	
+	private void addButton(String text, GameScreen screen) {
+		TextButton button = new TextButton(text, skin);
+		button.addListener(new SetScreenListener(screen));
+        table.add(button).uniform().fill().spaceBottom(10).row();
+	}
+
+	@Override
+	public void load() {
+		super.load();
+		assets.load(SpaceBoundMusic.MENU_SCREEN, Music.class);
+	}
+
+	@Override
+	protected void unload() {
+		//music.stop();
+		super.unload();
+		assets.unload(SpaceBoundMusic.MENU_SCREEN);
+	}
+}

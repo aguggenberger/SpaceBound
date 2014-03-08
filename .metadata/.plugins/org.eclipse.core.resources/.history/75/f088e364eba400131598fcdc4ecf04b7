@@ -1,0 +1,106 @@
+package com.aguggenberger.spacebound.screens;
+
+import com.aguggenberger.spacebound.actor.PlayerActor;
+import com.aguggenberger.spacebound.engine.Level;
+import com.aguggenberger.spacebound.resources.SpaceBoundAtlas;
+import com.aguggenberger.spacebound.resources.SpaceBoundTexture;
+import com.aguggenberger.spacebound.screens.base.StageScreen;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.maps.tiled.TiledMapRenderer;
+import com.badlogic.gdx.utils.Array;
+
+public class LevelScreen extends StageScreen {
+
+	private PlayerActor player;
+	private Level level;
+	public static TextureAtlas atlas;
+	public static Array<TextureRegion> meteors;
+	public static Array<TextureRegion> powerups;
+	public static TextureRegion meteorBrown_big1;
+	public static TextureRegion meteorBrown_big2;
+	public static TextureRegion meteorBrown_big3;
+	public static TextureRegion meteorBrown_big4;
+	public static TextureRegion meteorBrown_med1;
+	public static TextureRegion meteorBrown_med3;
+	public static TextureRegion meteorBrown_small1;
+	public static TextureRegion meteorBrown_small2;
+	public static TextureRegion meteorBrown_tiny1;
+	public static TextureRegion meteorBrown_tiny2;
+	public static TextureRegion spaceShip;
+	public static Texture background;
+
+	public LevelScreen(Level level) {
+		this.level = level;
+	}
+	
+	@Override
+	public void show() {
+		super.show();
+		player = new PlayerActor(spaceShip);	    
+	    stage.addActor(player);		
+	}
+	
+	@Override
+	protected void draw(float delta) {
+		float w = Gdx.graphics.getWidth();
+	      float h = Gdx.graphics.getHeight();
+	      batch.begin();
+	      
+	      int ws = (int)(w/background.getWidth());
+	      int hs = (int)(h/background.getHeight());
+	      for (int i = 0; i < ws; i++) {
+	         for (int j = 0; j < hs; j++) {
+	            batch.draw(background, i*background.getWidth(), j*background.getHeight());
+	         }
+	      }
+	      batch.end();
+	      super.draw(delta);
+			
+	}
+	
+
+	@Override
+	public void load() {
+		background = assets.get(SpaceBoundTexture.BACKGROUND_PURPLE, Texture.class);
+		background.setWrap(Texture.TextureWrap.Repeat, Texture.TextureWrap.Repeat);
+		
+		atlas = assets.get(SpaceBoundAtlas.GAME_ATLAS);
+		
+		spaceShip = atlas.findRegion(SpaceBoundAtlas.SPACE_SHIP_REGION);
+		
+		meteors = new Array<TextureRegion>();		
+		meteorBrown_big1 = atlas.findRegion(SpaceBoundAtlas.METEOR_BROWN_BIG1_REGION);
+		meteors.add(meteorBrown_big1);
+		meteorBrown_big2 = atlas.findRegion(SpaceBoundAtlas.METEOR_BROWN_BIG2_REGION);
+		meteors.add(meteorBrown_big2);
+		meteorBrown_big3 = atlas.findRegion(SpaceBoundAtlas.METEOR_BROWN_BIG3_REGION);
+		meteors.add(meteorBrown_big3);
+		meteorBrown_big4 = atlas.findRegion(SpaceBoundAtlas.METEOR_BROWN_BIG4_REGION);
+		meteors.add(meteorBrown_big4);
+		meteorBrown_med1 = atlas.findRegion(SpaceBoundAtlas.METEOR_BROWN_MED1_REGION);
+		meteors.add(meteorBrown_med1);
+		meteorBrown_med3 = atlas.findRegion(SpaceBoundAtlas.METEOR_BROWN_MED3_REGION);
+		meteors.add(meteorBrown_med3);
+		meteorBrown_small1 = atlas.findRegion(SpaceBoundAtlas.METEOR_BROWN_SMALL1_REGION);
+		meteors.add(meteorBrown_small1);
+		meteorBrown_small2 = atlas.findRegion(SpaceBoundAtlas.METEOR_BROWN_SMALL2_REGION);
+		meteors.add(meteorBrown_small2);
+		meteorBrown_tiny1 = atlas.findRegion(SpaceBoundAtlas.METEOR_BROWN_TINY1_REGION);
+		meteors.add(meteorBrown_tiny1);
+		meteorBrown_tiny2 = atlas.findRegion(SpaceBoundAtlas.METEOR_BROWN_TINY1_REGION);
+		meteors.add(meteorBrown_tiny2);
+		powerups = new Array<TextureRegion>(); 
+		powerups.add(atlas.findRegion(SpaceBoundAtlas.SILVER_SHEILD_REGION));
+	}
+
+	@Override
+	protected void unload() {
+		meteors.clear();
+		atlas.dispose();
+		background.dispose();
+	}
+}

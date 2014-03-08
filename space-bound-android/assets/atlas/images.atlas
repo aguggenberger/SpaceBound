@@ -1,0 +1,180 @@
+
+images.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shield1
+  rotate: false
+  xy: 1, 146
+  size: 133, 108
+  orig: 133, 108
+  offset: 0, 0
+  index: -1
+meteorBrown_big2
+  rotate: false
+  xy: 1, 46
+  size: 120, 98
+  orig: 120, 98
+  offset: 0, 0
+  index: -1
+meteorGrey_big2
+  rotate: false
+  xy: 136, 156
+  size: 120, 98
+  orig: 120, 98
+  offset: 0, 0
+  index: -1
+meteorBrown_big4
+  rotate: false
+  xy: 258, 158
+  size: 98, 96
+  orig: 98, 96
+  offset: 0, 0
+  index: -1
+meteorGrey_big4
+  rotate: false
+  xy: 358, 158
+  size: 98, 96
+  orig: 98, 96
+  offset: 0, 0
+  index: -1
+meteorBrown_big1
+  rotate: false
+  xy: 458, 170
+  size: 101, 84
+  orig: 101, 84
+  offset: 0, 0
+  index: -1
+meteorGrey_big1
+  rotate: false
+  xy: 561, 170
+  size: 101, 84
+  orig: 101, 84
+  offset: 0, 0
+  index: -1
+enemyBlue1
+  rotate: false
+  xy: 664, 170
+  size: 93, 84
+  orig: 93, 84
+  offset: 0, 0
+  index: -1
+ufoBlue
+  rotate: false
+  xy: 759, 163
+  size: 91, 91
+  orig: 91, 91
+  offset: 0, 0
+  index: -1
+playerShip1_red
+  rotate: false
+  xy: 852, 179
+  size: 99, 75
+  orig: 99, 75
+  offset: 0, 0
+  index: -1
+meteorBrown_big3
+  rotate: false
+  xy: 852, 95
+  size: 89, 82
+  orig: 89, 82
+  offset: 0, 0
+  index: -1
+meteorGrey_big3
+  rotate: false
+  xy: 458, 86
+  size: 89, 82
+  orig: 89, 82
+  offset: 0, 0
+  index: -1
+meteorBrown_med1
+  rotate: false
+  xy: 1, 1
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+meteorGrey_med1
+  rotate: false
+  xy: 953, 211
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+meteorBrown_med3
+  rotate: false
+  xy: 549, 128
+  size: 45, 40
+  orig: 45, 40
+  offset: 0, 0
+  index: -1
+meteorGrey_med2
+  rotate: false
+  xy: 46, 4
+  size: 45, 40
+  orig: 45, 40
+  offset: 0, 0
+  index: -1
+shield_silver
+  rotate: false
+  xy: 953, 179
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+meteorBrown_small1
+  rotate: false
+  xy: 943, 149
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+meteorGrey_small1
+  rotate: false
+  xy: 596, 140
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+meteorBrown_small2
+  rotate: false
+  xy: 549, 100
+  size: 29, 26
+  orig: 29, 26
+  offset: 0, 0
+  index: -1
+meteorGrey_small2
+  rotate: false
+  xy: 626, 142
+  size: 29, 26
+  orig: 29, 26
+  offset: 0, 0
+  index: -1
+meteorBrown_tiny1
+  rotate: false
+  xy: 998, 236
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+meteorGrey_tiny1
+  rotate: false
+  xy: 93, 26
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+meteorBrown_tiny2
+  rotate: false
+  xy: 943, 132
+  size: 16, 15
+  orig: 16, 15
+  offset: 0, 0
+  index: -1
+meteorGrey_tiny2
+  rotate: false
+  xy: 657, 153
+  size: 16, 15
+  orig: 16, 15
+  offset: 0, 0
+  index: -1

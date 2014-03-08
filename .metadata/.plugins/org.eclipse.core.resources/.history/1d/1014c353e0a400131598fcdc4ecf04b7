@@ -1,0 +1,11 @@
+package com.aguggenberger.spacebound.screens;
+
+import com.aguggenberger.spacebound.SpaceBound;
+
+public class StartGameScreen extends AbstractScreen{
+	
+	
+	public StartGameScreen(SpaceBound game){
+	    super(game);
+	}
+}

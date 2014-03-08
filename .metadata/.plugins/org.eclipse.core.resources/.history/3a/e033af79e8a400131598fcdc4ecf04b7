@@ -1,0 +1,27 @@
+package com.aguggenberger.spacebound.actor;
+
+import com.aguggenberger.spacebound.Assets;
+import com.aguggenberger.spacebound.engine.Engine;
+import com.aguggenberger.spacebound.resources.SpaceBoundAtlas;
+import com.aguggenberger.spacebound.screens.base.GameScreen;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.Actor;
+
+public class PlayerActor extends Actor {	
+	
+	private TextureRegion spaceShipRegion;
+	
+	public PlayerActor() {
+		spaceShipRegion = Engine.assets.get(SpaceBoundAtlas.SPACE_SHIP_REGION);
+		setBounds(0, 0, spaceShipRegion.getRegionWidth(), spaceShipRegion.getRegionHeight());
+	}
+	
+	@Override
+	public void draw(SpriteBatch batch, float parentAlpha) {
+		batch.draw(spaceShipRegion, getX(), getY(), getOriginX(), getOriginY(), getWidth(), getHeight(), 
+                getScaleX(), getScaleY(), getRotation());
+	}
+
+}

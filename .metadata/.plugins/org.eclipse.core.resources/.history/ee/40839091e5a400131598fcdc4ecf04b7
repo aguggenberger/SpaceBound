@@ -1,0 +1,6 @@
+package com.aguggenberger.spacebound.resources;
+
+public class SpaceBoundAtlas {
+	public static final String GAME_ATLAS = "atlas/images.atlas";
+
+}

@@ -1,0 +1,17 @@
+package com.aguggenberger.spacebound.actor;
+
+import com.aguggenberger.spacebound.Assets;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.scenes.scene2d.Actor;
+
+public class PlayerActor extends Actor {
+	
+	@Override
+	public void draw(SpriteBatch batch, float parentAlpha) {
+		// TODO Auto-generated method stub
+		batch.draw(jetTexture, getX(), getY(), getOriginX(), getOriginY(), getWidth(), getHeight(), 
+                getScaleX(), getScaleY(), getRotation());
+	}
+
+}

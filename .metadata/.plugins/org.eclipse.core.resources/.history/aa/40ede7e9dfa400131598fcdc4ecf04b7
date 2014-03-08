@@ -1,0 +1,11 @@
+package com.aguggenberger.spacebound.actor;
+
+import com.aguggenberger.spacebound.Assets;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.scenes.scene2d.Actor;
+
+public class PlayerActor extends Actor {
+	
+	Texture texture = new Texture(Assets.spaceShip);
+
+}

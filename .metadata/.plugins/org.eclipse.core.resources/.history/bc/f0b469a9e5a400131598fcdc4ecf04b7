@@ -1,0 +1,7 @@
+package com.aguggenberger.spacebound.resources;
+
+public class SpaceBoundAtlas {
+	public static final String GAME_ATLAS = "atlas/images.atlas";
+	public static final String SPACE_SHIP_REGION = "playerShip1_red";
+
+}
