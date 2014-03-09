@@ -18,7 +18,7 @@
 		<link>
 			<name>assets</name>
 			<type>2</type>
-			<location>G:/development/java/SpaceBound/space-bound-android/assets</location>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/space-bound-android/assets</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

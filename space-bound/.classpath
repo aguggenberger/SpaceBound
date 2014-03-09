@@ -6,5 +6,7 @@
 	<classpathentry kind="lib" path="libs/tween-engine-api.jar"/>
 	<classpathentry kind="lib" path="libs/gdx-sources.jar"/>
 	<classpathentry kind="lib" path="libs/tween-engine-api-sources.jar"/>
+	<classpathentry kind="lib" path="libs/bodyeditor-loader-sources.jar"/>
+	<classpathentry kind="lib" path="libs/bodyeditor-loader.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

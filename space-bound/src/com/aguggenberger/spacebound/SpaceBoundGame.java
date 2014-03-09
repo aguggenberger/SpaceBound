@@ -8,6 +8,7 @@ import com.aguggenberger.spacebound.resources.SpaceBoundSkin;
 import com.aguggenberger.spacebound.screens.LoadingScreen;
 import com.aguggenberger.spacebound.screens.MainMenuScreen;
 import com.aguggenberger.spacebound.screens.SplashScreen;
+import com.aguggenberger.spacebound.screens.box2dTestScreen;
 import com.aguggenberger.spacebound.screens.base.GameScreen;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -50,7 +51,8 @@ public class SpaceBoundGame extends GameExtended {
 	protected GameScreen getNextScreen(GameScreen screen) {
 		
 		if (screen == null) {
-			return new SplashScreen();
+			return new box2dTestScreen();
+			//return new SplashScreen();
 		} else if (screen instanceof SplashScreen) {
 			return new MainMenuScreen();
 		} else if (screen instanceof MainMenuScreen) {
