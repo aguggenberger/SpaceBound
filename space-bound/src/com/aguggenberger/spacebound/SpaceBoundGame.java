@@ -51,10 +51,11 @@ public class SpaceBoundGame extends GameExtended {
 	protected GameScreen getNextScreen(GameScreen screen) {
 		
 		if (screen == null) {
-			return new box2dTestScreen();
-			//return new SplashScreen();
+			return new SplashScreen();
 		} else if (screen instanceof SplashScreen) {
-			return new MainMenuScreen();
+			return new box2dTestScreen();
+			
+			//return new MainMenuScreen();
 		} else if (screen instanceof MainMenuScreen) {
 			MainMenuScreen menuScreen = (MainMenuScreen)screen;
 			return menuScreen.getNextScreen();

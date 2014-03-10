@@ -12,7 +12,7 @@ public class SpaceBoundLevelLoader implements ResourceLoader {
 	@Override
 	public void load(AssetManager assets) {
 		assets.load(SpaceBoundMusic.LEVEL, Music.class);
-		assets.load(SpaceBoundTexture.BACKGROUND_PURPLE, Texture.class);
+		assets.load(SpaceBoundTexture.BACKGROUND_PURPLE, Texture.class);  
 		assets.load(SpaceBoundAtlas.GAME_ATLAS, TextureAtlas.class);
 	}
 

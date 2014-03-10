@@ -7,6 +7,7 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Rectangle;
 import com.aguggenberger.spacebound.engine.services.*;
 
 public class Engine {
@@ -23,7 +24,8 @@ public class Engine {
 	public static EngineSettings settings;
 	public static BitmapFont font;
 	public static TweenManager tweenManger;
-
+	public static Rectangle viewport;
+	
 	public static void log(String text) {
 		Gdx.app.log(settings.log, text);
 	}

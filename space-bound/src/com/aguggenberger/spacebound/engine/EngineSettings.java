@@ -3,8 +3,9 @@ package com.aguggenberger.spacebound.engine;
 public class EngineSettings {
 	public static final String VERSION = "0.0.0.01 Pre-Alpha";
 	public static final String LOG = "game";
-	public static final int WIDTH = 480;
-	public static final int HEIGHT = 320;
+	public static final int VIRTUAL_WIDTH = 1280;
+	public static final int VIRTUAL_HEIGHT = 720;
+	public static final float ASPECT_RATIO = (float)VIRTUAL_WIDTH/(float)VIRTUAL_HEIGHT;
 
 	public int width;
 	public int height;
@@ -12,9 +13,9 @@ public class EngineSettings {
 	public String preferences;
 	public String version;
 	public String log;
-
+	
 	public EngineSettings() {
-		this(VERSION, LOG, WIDTH, HEIGHT);
+		this(VERSION, LOG, VIRTUAL_WIDTH, VIRTUAL_HEIGHT);
 	}
 	public EngineSettings(String version, 
 		String log, int width, int height) {

@@ -81,6 +81,13 @@ public abstract class GameExtended extends Game {
 		OrthographicCamera camera = new OrthographicCamera(settings.width, settings.height);
 		camera.position.set(settings.width / 2, settings.height / 2, 0);
 		
+//		float w = Gdx.graphics.getWidth();
+//        float h = Gdx.graphics.getHeight();
+//        OrthographicCamera camera = new OrthographicCamera(10, 10*h/w);
+//        camera.position.set(0, camera.viewportHeight/2, 0);
+//        //camera.update();
+        
+		
 		Engine.camera = camera;
 		
 		assets.setLoader(TiledMap.class, new TmxMapLoader(new InternalFileHandleResolver()));
